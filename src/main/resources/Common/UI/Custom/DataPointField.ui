@@ -1,0 +1,19 @@
+$C = "Common.ui";
+
+Group {
+  LayoutMode: Top;
+  FlexWeight: 0;
+  Anchor: (Left: 20, Top: 10);
+
+  Label #FieldLabel {
+    Text: "Label";
+    Style: (FontSize: 15, RenderBold: true);
+  }
+
+  TextField #FieldInput {
+    Style: $C.@DefaultInputFieldStyle;
+    Background: $C.@InputBoxBackground;
+    Anchor: (Width: 520, Height: 35, Left: 0);
+    Padding: (Full: 10);
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "TranslationProperties": {
+    "Name": "items.datapoint_block.name",
+    "Description": "items.datapoint_block.description"
+  },
+  "Id": "Datapoint_Block_Green",
+  "MaxStack": 1,
+  "Icon": "Icons/ItemsGenerated/Datapoint_Block_Green.png",
+  "Categories": [
+    "Tool.Block"
+  ],
+  "BlockSoundSetId": "Cloth",
+  "PlayerAnimationsId": "Block",
+  "Set": "Rock_Stone",
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Cube",
+    "Group": "Cloth",
+    "Flags": {},
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Rocks",
+        "ItemId": "datapoint_block"
+      }
+    },
+    "BlockParticleSetId": "Stone",
+    "Textures": [
+      {
+        "All": "BlockTextures/Datapoint_Block_Green.png"
+      }
+    ],
+    "ParticleColor": "#2baf2b",
+    "BlockSoundSetId": "Stone",
+    "BlockBreakingDecalId": "Breaking_Decals_Rock",
+    "Interactions": {
+      "Use": {
+        "Interactions": [
+          { "Type": "datapoint_interaction" }
+        ]
+      }
+    },
+    "InteractionHint": "interactionHints.configureDataPoint",
+    "BlockEntity": {
+      "Components": {
+        "DataPoint": {}
+      }
+    },
+    "State": {
+      "Definitions": {
+        "Yellow": {
+          "Textures": [
+            { "All": "BlockTextures/Datapoint_Block_Yellow.png" }
+          ],
+          "ParticleColor": "#ffc107"
+        },
+        "Red": {
+          "Textures": [
+            { "All": "BlockTextures/Datapoint_Block_Red.png" }
+          ],
+          "ParticleColor": "#e51c23"
+        },
+        "Blue": {
+          "Textures": [
+            { "All": "BlockTextures/Datapoint_Block_Blue.png" }
+          ],
+          "ParticleColor": "#4e6cef"
+        },
+        "Green": {
+          "Textures": [
+            { "All": "BlockTextures/Datapoint_Block_Green.png" }
+          ],
+          "ParticleColor": "#2baf2b"
+        }
+      }
+    }
+  },
+  "ResourceTypes": [
+    {
+      "Id": "Rock"
+    }
+  ]
+}

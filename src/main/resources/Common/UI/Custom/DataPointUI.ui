@@ -1,0 +1,134 @@
+$C = "Common.ui";
+$MP = "MapDataUI.ui";
+
+$C.@PageOverlay {
+
+    $C.@DecoratedContainer {
+        Anchor: (Width: 600, Height: 669);
+
+        #Title {
+            Group {
+                $C.@Title {
+                    @Text = "Datapoint";
+                }
+
+                Group {
+                    LayoutMode: Right;
+
+                    Button #Red {
+                        Background: "ColorButtons/Red.png";
+                        Anchor: (Width: 16, Height: 16);
+                    }
+                    Button #RedActive {
+                        Background: "ColorButtons/RedActive.png";
+                        Anchor: (Width: 16, Height: 16);
+                        Visible: false;
+                    }
+
+                    Group {
+                        Anchor: (Width: 4, Height: 0);
+                    }
+
+                    Button #Yellow {
+                        Background: "ColorButtons/Yellow.png";
+                        Anchor: (Width: 16, Height: 16);
+                    }
+                    Button #YellowActive {
+                        Background: "ColorButtons/YellowActive.png";
+                        Anchor: (Width: 16, Height: 16);
+                        Visible: false;
+                    }
+
+                    Group {
+                        Anchor: (Width: 4, Height: 0);
+                    }
+
+                    Button #Blue {
+                        Background: "ColorButtons/Blue.png";
+                        Anchor: (Width: 16, Height: 16);
+                    }
+                    Button #BlueActive {
+                        Background: "ColorButtons/BlueActive.png";
+                        Anchor: (Width: 16, Height: 16);
+                        Visible: false;
+                    }
+
+                    Group {
+                        Anchor: (Width: 4, Height: 0);
+                    }
+
+                    Button #Green {
+                        Background: "ColorButtons/Green.png";
+                        Anchor: (Width: 16, Height: 16);
+                    }
+                    Button #GreenActive {
+                        Background: "ColorButtons/GreenActive.png";
+                        Anchor: (Width: 16, Height: 16);
+                        Visible: false;
+                    }
+
+                    Group {
+                        Anchor: (Width: 12, Height: 0);
+                    }
+                }
+            }
+        }
+
+        #Content {
+            Group #FieldList {
+                Anchor: (Width: 580, Top: 2);
+                FlexWeight: 1;
+                LayoutMode: TopScrolling;
+                Padding: (Left: 7);
+                ScrollbarStyle: $C.@DefaultScrollbarStyle;
+
+                Group #Type {
+                    LayoutMode: Top;
+                    FlexWeight: 0;
+                    Anchor: (Left: 20, Top: 10);
+
+                    Label #TypeLabel {
+                        Text: "Type";
+                        Style: (FontSize: 15, RenderBold: true);
+                    }
+
+                    $C.@DropdownBox #TypeDropdown {
+                        Style: @DefaultDropdownBoxStyle;
+                        Anchor: (Left: 0, Width: 300, Height: 35);
+                    }
+                }
+
+                Group #FieldCards {
+                    LayoutMode: Top;
+                }
+            }
+
+            Group {
+                LayoutMode: Bottom;
+
+                Group #Buttons {
+                    LayoutMode: Center;
+                    FlexWeight: 0;
+                    Anchor: (Width: 600, Top: 30);
+
+                    $C.@TextButton #CloseButton {
+                        Text: "Close";
+                        Style: $MP.@CloseStyle;
+                        Anchor: (Width: 150, Height: 35);
+                    }
+
+                    Group {
+                        Anchor: (Width: 30);
+                    }
+
+                    $C.@TextButton #SaveButton {
+                        Text: "Save";
+                        Anchor: (Width: 150, Height: 35);
+                        Style: $MP.@SaveStyle;
+                        Padding: (Left: 8, Right: 8, Top: 4, Bottom: 4);
+                    }
+                }
+            }
+        }
+    }
+}
