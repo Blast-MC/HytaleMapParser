@@ -169,13 +169,13 @@ public class Runner {
     private CompletableFuture<Void> deleteWorld(World duplicate) {
         return executeOnWorldThread(Universe.get().getDefaultWorld(), () -> {
             try {
-                MapParser.getInstance().getLogger().at(Level.INFO).log("Deleting temp world...");
+                log("Deleting temp world...");
                 Universe.get().removeWorld(duplicate.getName());
-                MapParser.getInstance().getLogger().at(Level.INFO).log("Removing world files...");
+                log("Removing world files...");
                 FileUtil.deleteDirectory(duplicate.getSavePath());
-                MapParser.getInstance().getLogger().at(Level.INFO).log("Temp world deleted");
+                log("Temp world deleted");
             } catch (Exception e) {
-                MapParser.getInstance().getLogger().at(Level.WARNING).log("There was an error while deleting temp world");
+                log("There was an error while deleting temp world");
                 e.printStackTrace();
                 throw new RuntimeException(e);
             }
